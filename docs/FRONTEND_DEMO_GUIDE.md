@@ -349,7 +349,7 @@ FDR_10       | 22     | 15      | 68%     | ₹3,100.00
 
 ### Voice Settings:
 
-- **Voice**: gTTS (free Google TTS, Hindi support)
+- **Voice**: Rachel (ElevenLabs ID: 21m00Tcm4TlvDq8ikWAM)
 - **Language**: Hindi
 - **Duration**: 1-2 lines max (short, informative)
 - **Trigger**: Only on successful transactions (matched/submitted)

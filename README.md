@@ -37,7 +37,7 @@ ROSHNI enables three actors to interact in a feeder-level energy pool:
 - **Buyer dashboard**: Demand requests, pool allocations, savings
 - **Billing module**: Monthly bills with blockchain verification
 - **Admin panel**: Feeder metrics and DISCOM-level view
-- **Voice**: gTTS (free Hindi narration, no API key needed)
+- **Voice**: ElevenLabs Rachel voice, Hindi narration
 
 ### IoT (NodeMCU ESP8266)
 - **Real-time monitoring**: 5-second generation updates
