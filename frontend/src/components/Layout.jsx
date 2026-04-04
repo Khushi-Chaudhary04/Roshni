@@ -27,7 +27,7 @@ export default function Layout({
         onClose={() => setSidenavOpen(false)}
       />
 
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', marginTop: '1rem', padding: '0 1.5rem' }} className="container">
+      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1rem' }}>
         <div style={{ flex: 1 }}>
           <FeederSelector
             selectedFeeder={selectedFeeder}
@@ -38,21 +38,20 @@ export default function Layout({
         </div>
       </div>
 
-      <main className="container" style={{ paddingBottom: '4rem', minHeight: '60vh' }}>
+      <main className="container" style={{ paddingBottom: '2rem' }}>
         {children}
       </main>
 
       <footer style={{
         textAlign: 'center',
-        padding: '3rem 1rem',
-        borderTop: darkMode ? '1px solid rgba(255, 255, 255, 0.05)' : '1px solid rgba(0, 0, 0, 0.05)',
-        marginTop: 'auto',
-        color: darkMode ? '#888' : '#aaa',
-        fontSize: '0.9rem'
+        padding: '2rem',
+        borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+        marginTop: '3rem',
+        color: '#888',
       }}>
-        <p>Roshni — Renewable Energy for Everyone</p>
-        <p style={{ fontSize: '0.8rem', marginTop: '0.5rem', opacity: 0.7 }}>
-          Feeder: {selectedFeeder}
+        <p>🌞 ROSHNI v1.0 - AI-powered Solar Energy Pool | DISCOM-compliant | Blockchain-backed</p>
+        <p style={{ fontSize: '0.85rem', marginTop: '0.5rem' }}>
+          Feeder: {selectedFeeder} | Net Metering Compatible
         </p>
       </footer>
     </div>

@@ -11,59 +11,45 @@ export default function Navbar({ darkMode, setDarkMode, onMenuClick }) {
   }
 
   return (
-    <nav className="navbar" style={{ 
-      background: darkMode ? '#1e1e1e' : 'rgba(255, 255, 255, 0.8)', 
-      backdropFilter: 'blur(10px)',
-      boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
-      position: 'sticky',
-      top: 0,
-      zIndex: 100
-    }}>
-      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 0' }}>
+    <nav className="navbar">
+      <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <button
             onClick={onMenuClick}
             style={{
               background: 'none',
               border: 'none',
-              color: darkMode ? '#fff' : '#333',
+              color: 'white',
               fontSize: '1.5rem',
               cursor: 'pointer'
             }}
           >
             ☰
           </button>
-          <h1 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 600, color: '#34a853', letterSpacing: '-0.5px' }}>
-            Roshni
-          </h1>
+          <h1 style={{ margin: 0, fontSize: '1.8rem' }}>🌞 ROSHNI</h1>
         </div>
 
-        <ul className="nav-links" style={{ 
-          margin: 0, 
-          display: 'flex', 
-          gap: '1.5rem', 
-          listStyle: 'none',
-          fontWeight: 500
-        }}>
-          <li><Link to="/seller" style={{ color: darkMode ? '#e0e0e0' : '#444', textDecoration: 'none' }}>Sell Energy</Link></li>
-          <li><Link to="/buyer" style={{ color: darkMode ? '#e0e0e0' : '#444', textDecoration: 'none' }}>Buy Energy</Link></li>
-          <li><Link to="/billing" style={{ color: darkMode ? '#e0e0e0' : '#444', textDecoration: 'none' }}>Bills</Link></li>
+        <ul className="nav-links" style={{ margin: 0 }}>
+          <li><Link to="/seller">Seller</Link></li>
+          <li><Link to="/buyer">Buyer</Link></li>
+          <li><Link to="/billing">Bills</Link></li>
+          <li><Link to="/blockchain">Blockchain</Link></li>
+          <li><Link to="/admin">Admin</Link></li>
         </ul>
 
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <button
             className="theme-toggle"
             onClick={() => setDarkMode(!darkMode)}
             title="Toggle dark mode"
-            style={{ border: 'none', background: 'transparent', fontSize: '1.2rem', cursor: 'pointer' }}
           >
             {darkMode ? '☀️' : '🌙'}
           </button>
           <button
             className="theme-toggle"
             onClick={handleVoiceToggle}
-            title={voiceEnabled ? 'Voice enabled' : 'Voice disabled'}
-            style={{ border: 'none', background: 'transparent', fontSize: '1.2rem', cursor: 'pointer', opacity: voiceEnabled ? 1 : 0.4 }}
+            title={voiceEnabled ? 'Voice enabled - Click to disable' : 'Voice disabled - Click to enable'}
+            style={{ opacity: voiceEnabled ? 1 : 0.5 }}
           >
             {voiceEnabled ? '🔊' : '🔇'}
           </button>
